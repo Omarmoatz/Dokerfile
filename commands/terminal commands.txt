@@ -1,0 +1,8 @@
+- ls = show all file and folders in location 
+- mkdir (folder_name)  =  make folder
+- touch (file_name) = make file
+- cd (file or folder) = enter file or folder
+- cd ..  or  cd -  = go back to previous file or folder
+- cp (file_name) (folder_name) = copy file to another folder
+- rm (file or folder) = remove file or folder
+
