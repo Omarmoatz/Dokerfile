@@ -2,18 +2,31 @@
 - doker container ls - a
 - docker images 
 - docker image ls
+
 - docker container run (image_name from dockerhub or localy)
 - docker container run -d {--detach} (image_name)
 - docker container run -d {--detach} -p {--publish} --name (any name) (image_name)
 - docker container start (container_name) 
 - docker container stop(container_name) 
+
 - docker exec -it (continer_name) (somthing you want to open in it)	
 	ex: docker exec -it nginx bash
 - docker history (image_name)
+- docker inspect (image_or_cotainer_name) 
 - docker tag (image_name) :(its_tag) (my_dockerhub_username)/(image_name):(its_tag)
+
 - docker login 
 - docker push (custom_image_name)
 - docker logout
+
 - docker build .
 - docker build (Dockerfile_location)
 - docker build -t (any_name) .
+- docker-compose up --build
+- docker-compose up
+
+- docker volume ls
+- docker container run -d --name (any_name) -e (your_parameter) -v (any_name):(volume_location_on_pc) 									(image_name)	
+	ex: docker container run -d --name mariacnt -e MARIADB_ROOT_PASSWORD=1234 
+							-v mariavol:/var/lib/mysql mariadb
+
