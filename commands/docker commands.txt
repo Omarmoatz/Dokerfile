@@ -26,7 +26,22 @@
 - docker-compose up
 
 - docker volume ls
-- docker container run -d --name (any_name) -e (your_parameter) -v (any_name):(volume_location_on_pc) 									(image_name)	
-	ex: docker container run -d --name mariacnt -e MARIADB_ROOT_PASSWORD=1234 
-							-v mariavol:/var/lib/mysql mariadb
+- docker container run -d --name (any_name) -e (your_parameter) -v (any_name):(volume_location_on_pc) (image_name)	
+	ex: docker container run -d --name mariacnt -e MARIADB_ROOT_PASSWORD=1234 -v mariavol:/var/lib/mysql mariadb
+
+- mariadb -u root -p
+عشان اشوف الداتا الي موجوده في الداتابيز لازم يكون كونتينر واحد بس الي شغال
+
+- docker container run -it --name (any_name) -v ${pwd}:/(any_name) (any_Linux_os)
+	ex: docker container run -it --name container12 -v ${pwd}:/shared_folder2 alpine
+
+- docker container run -it --name (any_name) -p (any_host_port):(any_docker_port) -v ${pwd}:/(path) (any_Linux_os)
+	ex: docker container run -it --name container12 -p 8080:80 -v ${pwd}:/usr/share/nginx/html nginx
+
+- docker network create --driver (bridge-none-host) (any_name)
+- docker network create --driver (bridge-none-host) --subnet (any_subnet) (any_name)
+- docker network inspect (network_name)
+- docker run --network=(network_name) -d -it (linux_OS)
+- docker network disconnect (network_name) (conatiner_name_in_the_network)
+- docker network connect (network_name) (conatiner_name)
 
